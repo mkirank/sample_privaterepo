@@ -3,7 +3,7 @@ language: node_js
 build:
   ci:
     - echo "Hello, World!"
-    - sleep 3m
+
  
  
  
