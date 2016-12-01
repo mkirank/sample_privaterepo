@@ -3,5 +3,5 @@ language: node_js
 build:
   ci:
     - echo "Hello, World!"    
-    - cs ps   
+    
    
