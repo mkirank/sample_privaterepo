@@ -1,4 +1,4 @@
 #sl
 echo 'Hello runSh'
-#sleep 2m
+sleep 1m
 echo 'slept well'
