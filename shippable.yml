@@ -1,18 +1,40 @@
-language: node_js
+language: php
 
-build:
-  ci: 
-    - echo "Hello, World!"     
+php: 
+  - 5.5
+ # - 5.6  
  
-#integrations:
- # notifications:
-   #     - integrationName: test-generictrigger
-   #       type: webhook
-   #       payload:
-   #         - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
-   #         - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL     
-              
-    #      on_start: always
-    #      on_success: always
-    #      on_failure: always
-    #      on_pull_request: always
+services:
+  - memcache
+    
+build:
+  ci:
+    - mkdir -p shippable/codecoverage
+    - mkdir -p shippable/testresults   
+    - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php  
+
+integrations:
+  notifications:  
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiptest.rc.me@gmail.com
+        - shiptest.rc.ow@gmail.com
+      
+    - integrationName: slack
+      type: slack
+      recipients:
+        - "#public-chnl"
+        - pvt-channel
+      
+    - integrationName: irc
+      type: irc
+      recipients:
+        - "chat.freenode.net#test1"
+      
+    - integrationName: hipchat
+      type: hipchat
+      recipients:
+        - '#shiptestpub'
+        - '#shiptestpvt'
+        - '@shiptest'
