@@ -2,5 +2,5 @@
 echo 'Hello scriptprivate project'     
 #sleep 1m  
 echo 'slept well'
-env
+#env
 #echo '$BUILD_JOB_ID'
