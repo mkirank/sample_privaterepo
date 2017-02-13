@@ -14,3 +14,9 @@ echo 'Hello scriptprivate project'
 echo 'slept well'
 #env
 echo "$VERSION"
+
+main() {
+  set_context
+}
+
+main
