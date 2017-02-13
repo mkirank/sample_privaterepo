@@ -7,12 +7,13 @@ export RESO_JOB_UP=$(echo ${RESO_JOB//-/} | awk '{print toupper($0)}')
 set_context() {
   export VERSION=$(eval echo "$"$RESO_JOB_UP"_VERSIONNAME")
   echo "$VERSION"
+  echo "testing in set_context"
 }
 
 #sl
-echo 'Hello scriptprivate project'     
+#echo 'Hello scriptprivate project'     
 #sleep 1m  
-echo 'slept well'
+#echo 'slept well'
 #env
 
 
