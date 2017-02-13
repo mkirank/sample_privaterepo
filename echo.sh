@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
-export RES_REPO=sample_pvt_pr_test_reports
+export RESO_JOB=runShtest1
 
-export RES_REPO_UP=$(echo ${RES_REPO//-/} | awk '{print toupper($0)}')
+export RESO_JOB_UP=$(echo ${RESO_JOB//-/} | awk '{print toupper($0)}')
 
 set_context() {
-  export VERSION=$(eval echo "$"$RES_REPO_UP"_VERSIONNAME")
+  export VERSION=$(eval echo "$"$RESO_JOB_UP"_VERSIONNAME")
 }
 
 #sl
