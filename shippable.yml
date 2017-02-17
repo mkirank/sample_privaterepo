@@ -7,7 +7,7 @@ php:
 services:
   - memcache
     
-build:
+build:  
   ci:
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults   
