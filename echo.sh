@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 #sl
-echo --->'Hello scriptprivate project' 
+echo '--->Hello scriptprivate project' 
 
 sleep 1m  
