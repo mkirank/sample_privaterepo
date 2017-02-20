@@ -6,7 +6,7 @@ echo '--->Hello scriptprivate project'
 #sleep 1m  
 echo ' ---> one'
 export IMG_RES="image"
-export REPO_RES="run2"
+export REPO_RES="privategitrepo"
 
 export IMG_RES_UP=$(echo $IMG_RES | awk '{print toupper($0)}')
 export JOB_RES_UP=$(echo $REPO_RES | awk '{print toupper($0)}')
