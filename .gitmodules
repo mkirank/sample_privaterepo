@@ -1,0 +1,3 @@
+[submodule "langtest_u14nodall"]
+	path = langtest_u14nodall
+	url = https://shiptest-rc-ow@bitbucket.org/shiptest-rc-ow/langtest_u14nodall.git
