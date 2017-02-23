@@ -22,20 +22,22 @@ integrations:
         - shiptest.rc.me@gmail.com
         - shiptest.rc.ow@gmail.com
       
-    - integrationName: slack
+    - integrationName: notify-slack 
       type: slack
       recipients:
-        - "#public-chnl"
-        - pvt-channel
+        - "#random" 
+        - "#rc-public" 
+        - "#rc-private"
       
-    - integrationName: irc
+    - integrationName: irc    
       type: irc
       recipients:
-        - "chat.freenode.net#test1"
+        - "chat.freenode.net#test-rc"
       
-    - integrationName: hipchat
+    - integrationName: notify-hipchat
       type: hipchat
       recipients:
-        - '#shiptestpub'
-        - '#shiptestpvt'
+        - '#rc-private'
+        - '#rc-public'
+        - '@shiptestrcow'
         - '@shiptest'
