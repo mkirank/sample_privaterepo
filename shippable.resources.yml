@@ -1,0 +1,19 @@
+resources:
+  - name: sample-pvt
+    type: gitRepo
+    integration: bitbucket
+    pointer:
+      sourceName: "rcnewuiorg/sample-script-3"
+      branch: master
+  - name: test-trigger01-pvt
+    type: time
+    seed:
+      interval: "*/4 * * * *"
+    flags: t1
+  - name: sample_img_pvt
+    type: image
+    integration: ship-docker-1
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.2"
