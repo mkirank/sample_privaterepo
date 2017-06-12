@@ -5,6 +5,7 @@ resources:
     pointer:
       sourceName: "rctestorg/sample-script-3"
       branch: master
+    flags: git1
   - name: test-trigger01-pvt
     type: time
     seed:
@@ -17,3 +18,4 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
+    flags: image1
