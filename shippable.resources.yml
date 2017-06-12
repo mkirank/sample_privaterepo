@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     integration: bitbucket
     pointer:
-      sourceName: "rcnewuiorg/sample-script-3"
+      sourceName: "rctestorg/sample-script-3"
       branch: master
   - name: test-trigger01-pvt
     type: time
