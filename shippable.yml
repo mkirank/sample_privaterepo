@@ -12,7 +12,8 @@ build:
   
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults   
-    - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php  
+    - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php 
+    - sleep 5m
 
 integrations:
   notifications:  
@@ -20,7 +21,7 @@ integrations:
       type: email
       recipients: 
         - shiptest.rc.me@gmail.com
-      #  - shiptest.rc.ow@gmail.com
+        - shiptest.rc.ow@gmail.com
       
     - integrationName: notify-slack 
       type: slack
