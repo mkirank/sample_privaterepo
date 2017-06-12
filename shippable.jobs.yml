@@ -1,0 +1,25 @@
+jobs:
+  - name: runsh-job-pvt
+    type: runSh
+    allowPublicAccess: false
+    steps:
+      - IN: sample-pvt
+     # - IN: trigger01
+    #  - IN: test-trigger01
+      - TASK:
+        - script: IN/sample-pvt/gitRepo/echo.sh
+    flags: job1
+    
+  - name: runcliscript-job-pvt
+    type: runCLI
+    allowPublicAccess: true
+    steps:      
+      - IN: sample-pvt
+      - TASK:
+        - script: IN/sample-pvt/gitRepo/echo.sh
+        
+        
+  - name: manifest_dep_pvt
+    type: manifest
+    steps:
+      - IN: sample_img_pvt  
