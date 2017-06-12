@@ -17,9 +17,11 @@ jobs:
       - IN: sample-pvt
       - TASK:
         - script: IN/sample-pvt/gitRepo/echo.sh
+    flags: job-runcli
         
         
   - name: manifest_dep_pvt
     type: manifest
     steps:
       - IN: sample_img_pvt  
+    flags: manifest
