@@ -20,7 +20,7 @@ integrations:
       type: email
       recipients: 
         - shiptest.rc.me@gmail.com
-        - shiptest.rc.ow@gmail.com
+      #  - shiptest.rc.ow@gmail.com
       
     - integrationName: notify-slack 
       type: slack
