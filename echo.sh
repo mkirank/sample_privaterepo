@@ -20,3 +20,4 @@ echo img_version_as_repo=$IMG_VERSION_AS_REPOSVER
 
 echo "versionName=$IMG_VERSION_AS_REPOSVER" > /build/state/$IMG_RES.env #adding version state
 echo "anotherProperty=$IMG_VERSION" >> /build/state/$IMG_RES.env
+
