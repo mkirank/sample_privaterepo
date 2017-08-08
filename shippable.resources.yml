@@ -1,12 +1,12 @@
 resources:
-  - name: sample-pvt
+  - name: sample-scriptpvtgitreporepo
     type: gitRepo
     integration: bitbucket
     pointer:
       sourceName: "shiptest-rc-me/sample-script-pvt"
       branch: master
   
-  - name: sample-scriptpub
+  - name: sample-scriptpubgitreporepo
     type: gitRepo
     integration: bitbucket
     pointer:
