@@ -3,20 +3,20 @@ jobs:
     type: runSh
     allowPublicAccess: false
     steps:
-      - IN: sample-pvt
+      - IN: sample-scriptpvtgitreporepo
      # - IN: trigger01
     #  - IN: test-trigger01
       - TASK:
-        - script: IN/sample-pvt/gitRepo/echo.sh
+        - script: IN/sample-scriptpvtgitreporepo/gitRepo/echo.sh
     flags: job1
     
   - name: runcliscript-job-pvt
     type: runCLI
     allowPublicAccess: true
     steps:      
-      - IN: sample-pvt
+      - IN: sample-scriptpvtgitreporepo
       - TASK:
-        - script: IN/sample-pvt/gitRepo/echo.sh
+        - script: IN/sample-scriptpvtgitreporepo/gitRepo/echo.sh
     flags: job-runcli
         
         
