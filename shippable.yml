@@ -13,7 +13,11 @@ build:
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults   
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php 
-    #- sleep 5m
+    - lsb_release -a
+    - docker --version
+    - docker info
+    - docker ps
+    - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
 
 integrations:
   notifications:  
@@ -21,38 +25,6 @@ integrations:
       type: email
       recipients: 
         - shiptest.rc.me@gmail.com
-        - shiptest.rc.ow@gmail.com
+       # - shiptest.rc.ow@gmail.com
       
-    - integrationName: notify-slack 
-      type: slack
-      recipients:
-        - "#random" 
-        - "#rc-public" 
-        - "#rc-private"
-      
-    - integrationName: irc    
-      type: irc
-      recipients:
-        - "chat.freenode.net#test-rc"
-      
-    - integrationName: notify-hipchat
-      type: hipchat
-      recipients:
-        - '#rc-private'
-        - '#rc-public'
-        - '@shiptestrcow'
-        - '@shiptest'
-        
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
