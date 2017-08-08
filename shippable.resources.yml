@@ -3,14 +3,21 @@ resources:
     type: gitRepo
     integration: bitbucket
     pointer:
-      sourceName: "rctestorg/sample-script-3"
+      sourceName: "shiptest-rc-me/sample-script-pvt"
       branch: master
-    flags: git1
+  
+  - name: sample-scriptpub
+    type: gitRepo
+    integration: bitbucket
+    pointer:
+      sourceName: "shiptest-rc-me/sample-script-pub"
+      branch: master
+      
   - name: test-trigger01-pvt
     type: time
     seed:
       interval: "*/4 * * * *"
-    flags: t1
+  
   - name: sample_img_pvt
     type: image
     integration: ship-docker
@@ -18,4 +25,4 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
-    flags: image1
+ 
