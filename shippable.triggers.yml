@@ -3,3 +3,9 @@ triggers:
     type: trigger
     version:
       counter: 1
+      
+  - name: tr_2
+    type: trigger
+    version:
+      counter: 0
+      
