@@ -25,3 +25,22 @@ jobs:
     steps:
       - IN: sample_img_pvt  
     flags: manifest
+  
+  - name: runsh-job2-pvt
+    type: runSh
+    allowPublicAccess: true
+    steps:
+      - IN: runsh-job-pvt
+     # - IN: trigger01
+    #  - IN: test-trigger01
+      - TASK:
+        - script: ls
+
+  - name: runcliscript-job2-pvt
+    type: runCLI
+    steps:      
+      - IN: runcliscript-job-pvt
+      - TASK:
+        - script: ls
+ 
+    
