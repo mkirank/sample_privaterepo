@@ -9,7 +9,7 @@ git:
 build:  
   
   ci:
-    - echo "hello"
+    - echo "hello!"
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults   
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php 
