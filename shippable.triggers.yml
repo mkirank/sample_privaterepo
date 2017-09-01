@@ -1,5 +1,5 @@
 triggers:
-  - name: tr_1
+  - name: tr_11
     type: trigger
     version:
       counter: 1
