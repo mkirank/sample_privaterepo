@@ -12,7 +12,14 @@ resources:
     pointer:
       sourceName: "shiptest-rc-me/sample-script-pub"
       branch: master
-      
+  
+  - name: ddc-clusterpvt
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName : "nothing"
+    flags: ddc_cluster 
+    
   - name: test-trigger01-pvt
     type: time
     seed:
