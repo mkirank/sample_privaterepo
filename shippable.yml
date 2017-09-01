@@ -6,8 +6,7 @@ php:
 git:
    submodules: false
    
-build:  
-  
+build:   
   ci:
     - echo "hello!!"
     - mkdir -p shippable/codecoverage
