@@ -26,6 +26,13 @@ jobs:
       - IN: sample_img_pvt  
     flags: manifest
   
+  - name: deploy_ddc_pvt
+    type: deploy
+    steps:      
+      - IN: manifest_dep_pvt
+      - IN: ddc-clusterpvt
+    flags: deploy_ddc
+    
   - name: runsh-job2-pvt
     type: runSh
     allowPublicAccess: true
