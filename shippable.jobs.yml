@@ -50,4 +50,46 @@ jobs:
       - TASK:
         - script: ls
  
-    
+  - name: sample_privaterepo_runCI
+    type: runCI
+    allowPublicAccess: true
+    steps:
+      - IN: sample_privaterepo_ciRepo
+    flags:
+      - sample_privaterepo_runCI
+      - sample_privaterepo_runCIEnabledFromCIbutAddedFlagsInJobsYml      
+      
+  - name: sample-release-pvt
+    type: release
+    allowPublicAccess: true
+    steps:
+      - IN: sample-version-pvt
+      - TASK: managed
+        bump: rc
+        
+  - name: sample-ddcdeploy-pvt
+    type: deploy
+    allowPublicAccess: true
+    steps:
+      - IN: sample-ddccluster-pvt
+      - IN: manifest_dep_pvt
+      - IN: sample-params-pvt
+      - IN: sample-dopts-pvt
+    on_success:
+      - NOTIFY: sample-email-pvt
+      - NOTIFY: sample-slack-pvt
+      
+  - name: sample-provision-pvt                                            
+    type: provision     
+    allowPublicAccess: true
+    steps:
+      - IN: sample-files-pvt
+      
+  - name: sample-jenkins-pvt                  # a memorable, unique name. this is how your job will be referred to in shippable pipelines
+    type: jenkinsJob # The type of the job (should not be changed by the user)
+    allowPublicAccess: true
+    integration: "jenkins"   # The name of your Jenkins integration (created via accountSettings page)
+    pointer:
+      sourceName: "firstjob"          # The name of your Jenkins job
+    steps:
+      - OUT: "sample-files-pvt" 
