@@ -1,6 +1,7 @@
 resources:
   - name: sample-scriptpvtgitreporepo
     type: gitRepo
+    allowPublicAccess: true
     integration: bitbucket
     pointer:
       sourceName: "shiptest-rc-me/sample-script-pvt"
@@ -15,6 +16,7 @@ resources:
   
   - name: ddc-clusterpvt
     type: cluster
+    allowPublicAccess: true
     integration: ddc
     pointer:
       sourceName : "nothing"
@@ -22,14 +24,88 @@ resources:
     
   - name: test-trigger01-pvt
     type: time
+    allowPublicAccess: true
     seed:
       interval: "*/4 * * * *"
   
   - name: sample_img_pvt
     type: image
     integration: docker
+    allowPublicAccess: true
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
+
+  - name: sample-version-pvt
+    type: version
+    seed:
+      versionName: "5.9.1"
+      
+  - name: sample-dockerintegration-pvt
+    type: integration
+    integration: "docker"
+    
+  - name: sample-loadbalancer-pvt
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJSREYA
+      
+  - name: longnameforresourceinresourcesdotshippabledotyml-shipDockerCli-pvt
+    type: cliConfig
+    integration: "docker"
+    
+  - name: sample-files-pvt
+    type: file
+    integration: docker
+    pointer:
+      sourceName: "random"
+    seed:
+      versionName: "random-2"
+      
+  - name: sample-ddccluster-pvt
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName : "nothing"
+
+  - name: sample-slack-pvt
+    type: notification
+    integration: "notify-slack"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
+
+  - name: sample-email-pvt
+    type: notification
+    pointer:
+      method: email
+      recipients: 
+        - "varsha@shippable.com"
+        - "shiptest-rc-me@gmail.com"
+        
+  - name: sample-params-pvt
+    type: params
+    version:
+      params:
+        foo: bar
+        #secure: Xuq1cwGOn1lR1UTMfcwhdPUhJJXr0FeeG/M0/l4v7HFcjIRdrML13//R4RbMWxIeUtmdRWT1y3HRgQSqsRbYRIYF/6rTYH3/eazkowA2hHPZpT8vNfr3tFZJwQeSTf0qGtZOMO1iOacgaFOBgAdBCheJA8tN3ARHapUWk5bxuj7CpIq/LNWEbR/TcNNWaZJkyoWeK6/4U61xNPbVgyL1e73m3WmHPcGwpgTyxW+T1jqgh5m99D3p87UrfTeS6ss5YNA8lkZmFpdYZrq2LIKBMSJuq46Vj1VwRrtRGXYN2eYzmyDvpevciShm6Ai8w8o18eY6dwKrch8PSNloCVDHDA== 
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        
+  - name: sample-replica-pvt
+    type: replicas
+    version:
+      count: 2
  
+  - name: sample-state-pvt
+    type: state
+  
+  - name: sample-dopts-pvt
+    type: dockerOptions
+    version:
+      memory: 100
+      
