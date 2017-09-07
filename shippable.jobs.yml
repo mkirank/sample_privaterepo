@@ -4,6 +4,7 @@ jobs:
     allowPublicAccess: false
     steps:
       - IN: sample-scriptpvtgitreporepo
+      - IN: tr_11
      # - IN: trigger01
     #  - IN: test-trigger01
       - TASK:
