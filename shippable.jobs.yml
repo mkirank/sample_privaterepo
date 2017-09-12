@@ -27,13 +27,13 @@ jobs:
       - IN: runcli-jobrunCI-pvt
       - IN: tr_2
   
-  - name: runcli-jobrunCI-pvt
-    type: runCLI
-    allowPublicAccess: true
-    steps:      
-      - IN: sample-scriptpvtgitreporepo
-      - TASK:
-        - script: ls
+ # - name: runcli-jobrunCI-pvt
+  #  type: runCLI
+  #  allowPublicAccess: true
+  #  steps:      
+  #    - IN: sample-scriptpvtgitreporepo
+   #   - TASK:
+    #    - script: ls
         
   - name: runsh-jobrunCI-pvt
     type: runSh
