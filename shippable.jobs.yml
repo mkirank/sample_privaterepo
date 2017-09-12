@@ -24,7 +24,7 @@ jobs:
     type: runCI
     steps:
       - IN: sample_privaterepo_ciRepo
-      - IN: runcli-jobrunCI-pvt
+     # - IN: runcli-jobrunCI-pvt
       - IN: tr_2
   
  # - name: runcli-jobrunCI-pvt
