@@ -9,3 +9,23 @@ triggers:
     version:
       counter: 0
       
+  - name: tr_3
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: tr_4
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: tr_5
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: tr_6
+    type: trigger
+    version:
+      counter: 0     
+      
