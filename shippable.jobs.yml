@@ -19,7 +19,29 @@ jobs:
       - TASK:
         - script: IN/sample-scriptpvtgitreporepo/gitRepo/echo.sh
     flags: job-runcli
+  
+  - name: sample_privaterepo_runCI
+    type: runCI
+    steps:
+      - IN: sample_privaterepo_ciRepo
+      - IN: runcli-jobrunCI-pvt
+      - IN: tr_2
+  
+  - name: runcli-jobrunCI-pvt
+    type: runCLI
+    allowPublicAccess: true
+    steps:      
+      - IN: sample-scriptpvtgitreporepo
+      - TASK:
+        - script: ls
         
+  - name: runsh-jobrunCI-pvt
+    type: runSh
+    steps:
+      - IN: sample_privaterepo_runCI
+      - IN: tr_3
+      - TASK:
+        - script: ls
         
   - name: manifest_dep_pvt
     type: manifest
@@ -93,6 +115,5 @@ jobs:
     pointer:
       sourceName: "firstjob"          # The name of your Jenkins job
     steps:
-      - OUT: "sample-files-pvt" 
-      
+      - OUT: "sample-files-pvt"
       
