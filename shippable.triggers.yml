@@ -38,4 +38,14 @@ triggers:
     type: trigger
     version:
       counter: 0
+  
+  - name: tr_9
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: tr_10
+    type: trigger
+    version:
+      counter: 0
       
