@@ -99,6 +99,7 @@ jobs:
       - IN: sample-params-pvt
       - IN: sample-dopts-pvt
       - IN: tr_5
+      - IN: tr_6
     on_success:
       - NOTIFY: sample-email-pvt
       - NOTIFY: sample-slack-pvt
