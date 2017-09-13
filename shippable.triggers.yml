@@ -2,7 +2,7 @@ triggers:
   - name: tr_11
     type: trigger
     version:
-      counter: 6
+      counter: 7
   
   - name: tr_1
     type: trigger
