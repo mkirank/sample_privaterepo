@@ -1,23 +1,28 @@
-language: php
+# Language setting
+language: node_js
 
-php: 
-  - 7.1
-  #- "7.0"
-  #- "5.6" 
+# Version number
+node_js:
+  #- 8.1   
+  - 6.11
 
+#Uncomment below section to disable the private submodules
 git:
    submodules: false
+env:
+  - secure: lXSZhHdFui76pD7LYSfTAjD/6IKkl1wAgobE7TvJ4W3agH7KqNHFqiXK/DLesTvXdOVHJAn0kqiu5QJJ1M5W42nlrNJqoQR3XivCoE/L9pEQMh9BNtAHdcIKRnoxj04AO2hV1bXyv0HUda5aZebpqqK9KHORLaUAkZLdHsKIpPiF5AL02B5hOWhvAGI9gpUguNAIzolX2KkSluAngHJqwk4BLFSDAOj/jeINPijU08uvx9zgB1/kjemDlFJr/h6HCPmX4GdN0QNzDT7/aG4EzVolab0lnpNtrzU7TCJMQXwc0A9xmPNXLEiPXLbyEDVv6/FTR72qYNnSJOjh7JbR/w==
    
-build:   
+build:
   ci:
     - echo "Hello!"
-    - mkdir -p shippable/codecoverage
-    - mkdir -p shippable/testresults   
-    - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php 
+    - node --version
     - lsb_release -a
     - docker --version
     - docker info
     - docker ps
+    - echo $p1
+    - echo "env1=$env1"
+    - echo "env2=$env2"
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
 
 integrations:    
@@ -64,5 +69,5 @@ integrations:
       on_start: always
       on_success: always   
       on_failure: always
-      on_cancel: always   
+      on_cancel: always
       
