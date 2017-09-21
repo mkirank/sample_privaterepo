@@ -36,7 +36,16 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
-
+  
+  - name: sample_OUTimg_pvt
+    type: image
+    integration: docker
+    allowPublicAccess: true
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.2"
+      
   - name: sample-version-pvt
     type: version
     seed:
