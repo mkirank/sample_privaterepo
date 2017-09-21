@@ -9,6 +9,7 @@ jobs:
     #  - IN: test-trigger01
       - TASK:
         - script: IN/sample-scriptpvtgitreporepo/gitRepo/echo.sh
+      - OUT: sample_OUTimg_pvt
     flags: job1
     
   - name: runcliscript-job-pvt
