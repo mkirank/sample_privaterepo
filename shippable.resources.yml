@@ -44,7 +44,7 @@ resources:
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
-      versionName: "latest"
+      versionName: "latest1"
       
   - name: sample-version-pvt
     type: version
